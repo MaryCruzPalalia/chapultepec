@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)http://70.35.195.68:8069/web?debug=1#id=539&view_type=form&model=ir.ui.view&action=25&active_id=192&menu_id=4 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+                <title>report_payment_receipt - Odoo</title>
+                <link type="image/x-icon" rel="shortcut icon" href="http://70.35.195.68:8069/web/static/src/img/favicon.ico">
+
+                <script type="text/javascript">
+                    var odoo = {
+                        csrf_token: "cf23bf617521487bb2ead37bdb2da1b787e8ffbao",
+                    };
+                </script>
+
+                
+                <meta name="theme-color" content="#875A7B">
+                <link rel="icon" sizes="192x192" href="http://70.35.195.68:8069/web_enterprise/static/src/img/mobile-icons/android-192x192.png">
+
+                <meta name="apple-mobile-web-app-capable" content="yes">
+                <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                <link rel="apple-touch-icon" href="http://70.35.195.68:8069/web_enterprise/static/src/img/mobile-icons/apple-152x152.png">
+
+                <meta name="msapplication-navbutton-color" content="#875A7B">
+                <meta name="msapplication-TileColor" content="#875A7B">
+                <meta name="msapplication-TileImage" content="/web_enterprise/static/src/img/mobile-icons/windows-144x144.png">
+            
+                <script type="text/javascript">
+                    odoo.session_info = {"session_id": "8fc4a3af3fadc7da8735a94745876f8d64c39df9", "uid": 1, "is_system": true, "is_superuser": true, "user_context": {"lang": "es_MX", "tz": "America/Mexico_City", "uid": 1}, "db": "Ferretevar_", "server_version": "11.0+e", "server_version_info": [11, 0, 0, "final", 0, "e"], "name": "Administrator", "username": "info@soluciones4g.com", "company_id": 1, "partner_id": 3, "user_companies": {"current_company": [1, "FERRETEVAR SA DE CV"], "allowed_companies": [[1, "FERRETEVAR SA DE CV"], [3, "Smartelecom"]]}, "currencies": {"1": {"symbol": "\u20ac", "position": "after", "digits": [69, 2]}, "34": {"symbol": "$", "position": "before", "digits": [69, 2]}, "3": {"symbol": "$", "position": "before", "digits": [69, 2]}}, "web.base.url": "http://localhost:8069", "max_time_between_keys_in_ms": 55, "warning": "admin", "expiration_date": "2019-07-25 20:34:50", "expiration_reason": "demo", "web_tours": ["account_accountant_tour"], "device_subscription_ids": [], "fcm_project_id": "", "inbox_action": 89};
+                </script>
+
+                <link type="text/css" rel="stylesheet" href="./report_payment_receipt - Odoo_files/web.assets_common.0.css">
+                <link type="text/css" rel="stylesheet" href="./report_payment_receipt - Odoo_files/web.assets_backend.0.css">
+                <link type="text/css" rel="stylesheet" href="./report_payment_receipt - Odoo_files/web.assets_backend.1.css">
+                <link type="text/css" rel="stylesheet" href="./report_payment_receipt - Odoo_files/web.assets_backend.2.css">
+        <link type="text/css" rel="stylesheet" href="./report_payment_receipt - Odoo_files/web_editor.summernote.0.css">
+        <link type="text/css" rel="stylesheet" href="./report_payment_receipt - Odoo_files/web_editor.assets_editor.0.css">
+    
+                <script type="text/javascript" src="./report_payment_receipt - Odoo_files/web.assets_common.js"></script>
+                <script type="text/javascript" src="./report_payment_receipt - Odoo_files/web.assets_backend.js"></script>
+        <script type="text/javascript" src="./report_payment_receipt - Odoo_files/web_editor.summernote.js"></script>
+        <script type="text/javascript" src="./report_payment_receipt - Odoo_files/web_editor.assets_editor.js"></script>
+    
+
+                
+                    <!--[if lt IE 10]>
+                        <body class="ie9">
+                    <![endif]-->
+                
+
+                <script type="text/javascript">
+                    odoo.define('web.web_client', function (require) {
+                        var WebClient = require('web.WebClient');
+                        var web_client = new WebClient();
+                        $(function() {
+                            web_client.setElement($(document.body));
+                            web_client.start();
+                        });
+                        return web_client;
+                    });
+                </script>
+            
+            <script type="text/javascript" src="./report_payment_receipt - Odoo_files/es_MX"></script><script type="text/javascript" src="./report_payment_receipt - Odoo_files/ace.odoo-custom.js"></script><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><script type="text/javascript" src="./report_payment_receipt - Odoo_files/mode-python.js"></script><script type="text/javascript" src="./report_payment_receipt - Odoo_files/mode-xml.js"></script></head>
+            <body class="o_web_client" data-odoo-version="legacy" data-debug-mode="1"><nav>
+    <div class="o_main_navbar">
+        <a class="fa o_menu_toggle fa-th" href="http://70.35.195.68:8069/web?debug=1#" accesskey="h"></a>
+        <button class="fa fa-bars pull-right visible-xs-block o_mobile_menu_toggle" type="button"></button>
+
+        <div class="o_menu_brand" role="button">Ajustes</div>
+        <ul class="o_menu_sections"><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_2" data-action-id="76" data-action-model="ir.actions.client" data-menu="67" data-menu-xmlid="web_settings_dashboard.web_dashboard_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=67&amp;action=76">
+            <span>Tablero</span>
+        </a>
+    </li><li>
+                            <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="http://70.35.195.68:8069/web?debug=1#" role="button" data-menu-xmlid="base.menu_users">
+                                Usuarios y compañías
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                
+                                    
+                                    
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_2" data-action-id="65" data-action-model="ir.actions.act_window" data-menu="58" data-menu-xmlid="base.menu_action_res_users" href="http://70.35.195.68:8069/web?debug=1#menu_id=58&amp;action=65">
+            <span>Usuarios</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_2" data-action-id="64" data-action-model="ir.actions.act_window" data-menu="57" data-menu-xmlid="base.menu_action_res_groups" href="http://70.35.195.68:8069/web?debug=1#menu_id=57&amp;action=64">
+            <span>Grupos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_2" data-action-id="44" data-action-model="ir.actions.act_window" data-menu="54" data-menu-xmlid="base.menu_action_res_company_form" href="http://70.35.195.68:8069/web?debug=1#menu_id=54&amp;action=44">
+            <span>Compañías</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+                                
+                            </ul>
+                        </li><li>
+                            <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="http://70.35.195.68:8069/web?debug=1#" role="button" data-menu-xmlid="base.menu_translation">
+                                Traducciones
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                
+                                    
+                                    
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_2" data-action-id="46" data-action-model="ir.actions.act_window" data-menu="56" data-menu-xmlid="base.menu_res_lang_act_window" href="http://70.35.195.68:8069/web?debug=1#menu_id=56&amp;action=46">
+            <span>Idiomas</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_2" data-action-id="36" data-action-model="ir.actions.act_window" data-menu="49" data-menu-xmlid="base.menu_view_base_language_install" href="http://70.35.195.68:8069/web?debug=1#menu_id=49&amp;action=36">
+            <span>Cargar una traducción</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Importar / Exportar</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="37" data-action-model="ir.actions.act_window" data-menu="50" data-menu-xmlid="base.menu_view_base_import_language" href="http://70.35.195.68:8069/web?debug=1#menu_id=50&amp;action=37">
+            <span>Importar traducción</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="40" data-action-model="ir.actions.act_window" data-menu="52" data-menu-xmlid="base.menu_wizard_lang_export" href="http://70.35.195.68:8069/web?debug=1#menu_id=52&amp;action=40">
+            <span>Exportar traducción</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Términos de la aplicación</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="23" data-action-model="ir.actions.act_window" data-menu="39" data-menu-xmlid="base.menu_action_translation" href="http://70.35.195.68:8069/web?debug=1#menu_id=39&amp;action=23">
+            <span>Términos Traducidos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="41" data-action-model="ir.actions.act_window" data-menu="53" data-menu-xmlid="base.menu_wizard_update_translations" href="http://70.35.195.68:8069/web?debug=1#menu_id=53&amp;action=41">
+            <span>Generar términos pendientes</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                            </ul>
+                        </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_2" data-action-id="79" data-action-model="ir.actions.act_window" data-menu="82" data-menu-xmlid="base_setup.menu_config" href="http://70.35.195.68:8069/web?debug=1#menu_id=82&amp;action=79">
+            <span>Opciones Generales</span>
+        </a>
+    </li><li class="">
+                            <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="http://70.35.195.68:8069/web?debug=1#" role="button" data-menu-xmlid="base.menu_custom">
+                                Técnico
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Email</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="82" data-action-model="ir.actions.act_window" data-menu="83" data-menu-xmlid="mail.menu_message_subtype" href="http://70.35.195.68:8069/web?debug=1#menu_id=83&amp;action=82">
+            <span>Subtipos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="83" data-action-model="ir.actions.act_window" data-menu="84" data-menu-xmlid="mail.menu_mail_tracking_value" href="http://70.35.195.68:8069/web?debug=1#menu_id=84&amp;action=83">
+            <span>Valores de seguimiento</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="84" data-action-model="ir.actions.act_window" data-menu="85" data-menu-xmlid="mail.menu_mail_message" href="http://70.35.195.68:8069/web?debug=1#menu_id=85&amp;action=84">
+            <span>Mensajes</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="85" data-action-model="ir.actions.act_window" data-menu="86" data-menu-xmlid="mail.menu_mail_mail" href="http://70.35.195.68:8069/web?debug=1#menu_id=86&amp;action=85">
+            <span>Correos electrónicos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="91" data-action-model="ir.actions.act_window" data-menu="92" data-menu-xmlid="mail.menu_mail_activity_type" href="http://70.35.195.68:8069/web?debug=1#menu_id=92&amp;action=91">
+            <span>Tipos de actividad</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="103" data-action-model="ir.actions.act_window" data-menu="95" data-menu-xmlid="fetchmail.menu_action_fetchmail_server_tree" href="http://70.35.195.68:8069/web?debug=1#menu_id=95&amp;action=103">
+            <span>Servidores de correo entrante</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="12" data-action-model="ir.actions.act_window" data-menu="28" data-menu-xmlid="base.menu_mail_servers" href="http://70.35.195.68:8069/web?debug=1#menu_id=28&amp;action=12">
+            <span>Servidores de correo saliente</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="96" data-action-model="ir.actions.act_window" data-menu="94" data-menu-xmlid="mail.menu_email_templates" href="http://70.35.195.68:8069/web?debug=1#menu_id=94&amp;action=96">
+            <span>Plantillas</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="86" data-action-model="ir.actions.act_window" data-menu="87" data-menu-xmlid="mail.menu_email_followers" href="http://70.35.195.68:8069/web?debug=1#menu_id=87&amp;action=86">
+            <span>Seguidores</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="94" data-action-model="ir.actions.act_window" data-menu="93" data-menu-xmlid="mail.mail_alias_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=93&amp;action=94">
+            <span>Seudónimos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="88" data-action-model="ir.actions.act_window" data-menu="89" data-menu-xmlid="mail.mail_channel_menu_settings" href="http://70.35.195.68:8069/web?debug=1#menu_id=89&amp;action=88">
+            <span>Canales</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="87" data-action-model="ir.actions.act_window" data-menu="88" data-menu-xmlid="mail.mail_channel_partner_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=88&amp;action=87">
+            <span>Canales/socios</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>IAP</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="73" data-action-model="ir.actions.act_window" data-menu="64" data-menu-xmlid="iap.iap_account_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=64&amp;action=73">
+            <span>Cuentas IAP</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Acciones</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="3" data-action-model="ir.actions.act_window" data-menu="20" data-menu-xmlid="base.menu_ir_sequence_actions" href="http://70.35.195.68:8069/web?debug=1#menu_id=20&amp;action=3">
+            <span>Acciones</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="4" data-action-model="ir.actions.act_window" data-menu="21" data-menu-xmlid="base.menu_ir_action_report" href="http://70.35.195.68:8069/web?debug=1#menu_id=21&amp;action=4">
+            <span>Informes</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="5" data-action-model="ir.actions.act_window" data-menu="22" data-menu-xmlid="base.menu_ir_action_window" href="http://70.35.195.68:8069/web?debug=1#menu_id=22&amp;action=5">
+            <span>Acciones de ventana</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="6" data-action-model="ir.actions.act_window" data-menu="23" data-menu-xmlid="base.menu_server_action" href="http://70.35.195.68:8069/web?debug=1#menu_id=23&amp;action=6">
+            <span>Acciones de servidor</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="7" data-action-model="ir.actions.act_window" data-menu="24" data-menu-xmlid="base.menu_ir_actions_todo_form" href="http://70.35.195.68:8069/web?debug=1#menu_id=24&amp;action=7">
+            <span>Asistentes de configuración</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="27" data-action-model="ir.actions.act_window" data-menu="43" data-menu-xmlid="base.ir_default_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=43&amp;action=27">
+            <span>Valores por defecto del usuario</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Interfaz de usuario</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="24" data-action-model="ir.actions.act_window" data-menu="40" data-menu-xmlid="base.menu_grant_menu_access" href="http://70.35.195.68:8069/web?debug=1#menu_id=40&amp;action=24">
+            <span>Elementos de menú</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="25" data-action-model="ir.actions.act_window" data-menu="41" data-menu-xmlid="base.menu_action_ui_view" href="http://70.35.195.68:8069/web?debug=1#menu_id=41&amp;action=25">
+            <span>Vistas</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="26" data-action-model="ir.actions.act_window" data-menu="42" data-menu-xmlid="base.menu_action_ui_view_custom" href="http://70.35.195.68:8069/web?debug=1#menu_id=42&amp;action=26">
+            <span>Vistas personalizadas</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="11" data-action-model="ir.actions.act_window" data-menu="27" data-menu-xmlid="base.menu_ir_filters" href="http://70.35.195.68:8069/web?debug=1#menu_id=27&amp;action=11">
+            <span>Filtros de usuario</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="75" data-action-model="ir.actions.act_window" data-menu="66" data-menu-xmlid="web_tour.menu_tour_action" href="http://70.35.195.68:8069/web?debug=1#menu_id=66&amp;action=75">
+            <span>Recorridos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="74" data-action-model="ir.actions.act_window" data-menu="65" data-menu-xmlid="web_planner.web_planner_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=65&amp;action=74">
+            <span>Planificadores</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Estructura de la base de datos</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="14" data-action-model="ir.actions.act_window" data-menu="29" data-menu-xmlid="base.ir_model_model_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=29&amp;action=14">
+            <span>Modelos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="15" data-action-model="ir.actions.act_window" data-menu="30" data-menu-xmlid="base.ir_model_model_fields" href="http://70.35.195.68:8069/web?debug=1#menu_id=30&amp;action=15">
+            <span>Campos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="17" data-action-model="ir.actions.act_window" data-menu="33" data-menu-xmlid="base.ir_model_constraint_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=33&amp;action=17">
+            <span>Restricciones del modelo</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="18" data-action-model="ir.actions.act_window" data-menu="34" data-menu-xmlid="base.ir_model_relation_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=34&amp;action=18">
+            <span>Relaciones ManyToMany</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="20" data-action-model="ir.actions.act_window" data-menu="36" data-menu-xmlid="base.menu_action_attachment" href="http://70.35.195.68:8069/web?debug=1#menu_id=36&amp;action=20">
+            <span>Adjuntos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="30" data-action-model="ir.actions.act_window" data-menu="44" data-menu-xmlid="base.ir_logging_all_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=44&amp;action=30">
+            <span>Registro</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="45" data-action-model="ir.actions.act_window" data-menu="55" data-menu-xmlid="base.menu_res_request_link_act" href="http://70.35.195.68:8069/web?debug=1#menu_id=55&amp;action=45">
+            <span>Modelos referenciables</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="78" data-action-model="ir.actions.act_window" data-menu="81" data-menu-xmlid="decimal_precision.menu_decimal_precision_form" href="http://70.35.195.68:8069/web?debug=1#menu_id=81&amp;action=78">
+            <span>Precisión decimal</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Automatización</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="447" data-action-model="ir.actions.act_window" data-menu="330" data-menu-xmlid="base_automation.menu_base_automation_form" href="http://70.35.195.68:8069/web?debug=1#menu_id=330&amp;action=447">
+            <span>Acciones automatizadas</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="10" data-action-model="ir.actions.act_window" data-menu="26" data-menu-xmlid="base.menu_ir_cron_act" href="http://70.35.195.68:8069/web?debug=1#menu_id=26&amp;action=10">
+            <span>Acciones planificadas</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Calendario</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="357" data-action-model="ir.actions.act_window" data-menu="271" data-menu-xmlid="calendar.menu_calendar_event_type" href="http://70.35.195.68:8069/web?debug=1#menu_id=271&amp;action=357">
+            <span>Tipos de reunión</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="358" data-action-model="ir.actions.act_window" data-menu="272" data-menu-xmlid="calendar.menu_calendar_alarm" href="http://70.35.195.68:8069/web?debug=1#menu_id=272&amp;action=358">
+            <span>Alarma de calendario</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Informes</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="69" data-action-model="ir.actions.act_window" data-menu="61" data-menu-xmlid="base.paper_format_menuitem" href="http://70.35.195.68:8069/web?debug=1#menu_id=61&amp;action=69">
+            <span>Formato de papel</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="70" data-action-model="ir.actions.act_window" data-menu="62" data-menu-xmlid="base.reports_menuitem" href="http://70.35.195.68:8069/web?debug=1#menu_id=62&amp;action=70">
+            <span>Informes</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Secuencias e identificadores</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="16" data-action-model="ir.actions.act_window" data-menu="32" data-menu-xmlid="base.ir_model_data_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=32&amp;action=16">
+            <span>Identificadores externos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="22" data-action-model="ir.actions.act_window" data-menu="38" data-menu-xmlid="base.menu_ir_sequence_form" href="http://70.35.195.68:8069/web?debug=1#menu_id=38&amp;action=22">
+            <span>Secuencias</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Parámetros</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="9" data-action-model="ir.actions.act_window" data-menu="25" data-menu-xmlid="base.ir_config_menu" href="http://70.35.195.68:8069/web?debug=1#menu_id=25&amp;action=9">
+            <span>Parámetros del sistema</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="67" data-action-model="ir.actions.act_window" data-menu="59" data-menu-xmlid="base.menu_ir_property_form_all" href="http://70.35.195.68:8069/web?debug=1#menu_id=59&amp;action=67">
+            <span>Propiedades de la compañia</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Seguridad</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="21" data-action-model="ir.actions.act_window" data-menu="37" data-menu-xmlid="base.menu_action_rule" href="http://70.35.195.68:8069/web?debug=1#menu_id=37&amp;action=21">
+            <span>Reglas de registro</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="19" data-action-model="ir.actions.act_window" data-menu="35" data-menu-xmlid="base.menu_ir_access_act" href="http://70.35.195.68:8069/web?debug=1#menu_id=35&amp;action=19">
+            <span>Lista de controles de acceso</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                                    
+                                    
+    
+    
+
+    
+
+    
+    <li role="presentation" class="dropdown-header o_menu_header_lvl_2">
+        <span>Recurso</span>
+        
+            
+    
+    
+
+    </li><li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="368" data-action-model="ir.actions.act_window" data-menu="274" data-menu-xmlid="resource.menu_resource_calendar" href="http://70.35.195.68:8069/web?debug=1#menu_id=274&amp;action=368">
+            <span>Horario de trabajo</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="364" data-action-model="ir.actions.act_window" data-menu="275" data-menu-xmlid="resource.menu_view_resource_calendar_leaves_search" href="http://70.35.195.68:8069/web?debug=1#menu_id=275&amp;action=364">
+            <span>Ausencias de recursos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+            
+    
+    
+
+    <li>
+        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" class="o_menu_entry_lvl_3" data-action-id="362" data-action-model="ir.actions.act_window" data-menu="276" data-menu-xmlid="resource.menu_resource_resource" href="http://70.35.195.68:8069/web?debug=1#menu_id=276&amp;action=362">
+            <span>Recursos</span>
+        </a>
+    </li>
+
+    
+    
+
+    
+   
+
+        
+    
+
+    
+   
+
+                                
+                            </ul>
+                        </li></ul>
+        <ul class="o_menu_systray"><li class="o_planner_systray hidden-xs o_hidden">
+            <div class="progress o_hidden" data-original-title="" title=""><div class="progress-bar"></div></div>
+        </li><li class="o_mail_navbar_item o_no_notification">
+            <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="http://70.35.195.68:8069/web?debug=1#" title="Actividades">
+                <i class="fa fa-clock-o"></i> <span class="o_notification_counter badge">0</span>
+            </a>
+            <ul class="o_mail_navbar_dropdown dropdown-menu" role="menu">
+                <li class="o_mail_navbar_dropdown_channels">
+        
+            <li class="text-center o_no_activity">
+                <span>Sin actividades planificadas.</span>
+            </li>
+        
+        
+    </li>
+            </ul>
+        </li><li class="o_mail_navbar_item o_no_notification">
+            <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="http://70.35.195.68:8069/web?debug=1#" title="Conversaciones">
+                <i class="fa fa-comments"></i> <span class="o_notification_counter badge">0</span>
+            </a>
+            <ul class="o_mail_navbar_dropdown dropdown-menu" role="menu">
+                
+                <li class="o_mail_navbar_dropdown_top">
+                    <div>
+                        <button class="btn btn-sm o_filter_button active" type="button"> Todos </button>
+                        <button class="btn btn-sm o_filter_button" data-filter="chat" type="button"> Chat </button>
+                        <button class="btn btn-sm o_filter_button" data-filter="channels" type="button"> Canales </button>
+                    </div>
+                    <button class="btn btn-sm o_new_message" type="button"> Nuevo mensaje </button>
+                </li>
+                <li class="o_mail_navbar_dropdown_channels"></li>
+                
+            </ul>
+        </li><li class="o_debug_manager">
+        <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="http://70.35.195.68:8069/web?debug=1#" title="Abrir herramientas de desarrollador">
+            <span class="fa fa-bug"></span>
+        </a>
+        <ul class="dropdown-menu o_debug_dropdown" role="menu">
+    <li><a data-action="perform_js_tests" href="http://70.35.195.68:8069/web?debug=1#">Correr los tests JS</a></li>
+    <li><a data-action="perform_js_mobile_tests" href="http://70.35.195.68:8069/web?debug=1#">Ejecutar pruebas de JS Mobile</a></li>
+    <li><a data-action="select_view" href="http://70.35.195.68:8069/web?debug=1#">Abrir vista</a>
+        
+            </li><li>
+                <a data-action="consume_tours" href="http://70.35.195.68:8069/web?debug=1#">Desactivar recorridos</a>
+            </li>
+            <li>
+                <a data-action="start_tour" href="http://70.35.195.68:8069/web?debug=1#">Comenzar recorrido</a>
+            </li>
+        
+    
+    
+    
+    
+        <li class="divider"></li>
+        <li><a data-action="edit" href="http://70.35.195.68:8069/web?debug=1#" data-id="25" data-model="ir.actions.act_window">Editar Acción</a></li>
+        
+            <li><a data-action="get_view_fields" href="http://70.35.195.68:8069/web?debug=1#">Ver Campos</a></li>
+            <li><a data-action="manage_filters" href="http://70.35.195.68:8069/web?debug=1#">Gestionar Filtros</a></li>
+            <li><a data-action="translate" href="http://70.35.195.68:8069/web?debug=1#">Traducción técnica</a></li>
+        
+    
+
+    
+        <li class="divider"></li>
+        
+            <li><a data-action="set_defaults" href="http://70.35.195.68:8069/web?debug=1#">Establecer Predeterminados</a></li>
+            
+                <li><a data-action="get_metadata" href="http://70.35.195.68:8069/web?debug=1#">Ver metadatos</a></li>
+            
+        
+        <li><a data-action="fvg" href="http://70.35.195.68:8069/web?debug=1#">Obtener Campos de Vista</a></li>
+        
+            <li>
+              <a data-action="edit" data-model="ir.ui.view" href="http://70.35.195.68:8069/web?debug=1#" data-id="65">
+                Editar vista de formulario
+              </a>
+            </li>
+            
+        
+    
+<li class="divider o_debug_leave_section"></li>
+    <li><a data-action="split_assets" href="http://70.35.195.68:8069/web?debug=1#">Activar depuración de activos</a></li>
+    <li><a data-action="leave_debug_mode" href="http://70.35.195.68:8069/web?debug=1#">Abandonar las herramientas de desarrollo</a></li>
+</ul>
+    </li><li class="o_switch_company_menu">
+        <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="http://70.35.195.68:8069/web?debug=1#">
+            <span class="oe_topbar_name">FERRETEVAR SA DE CV</span> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu"><li><a href="http://70.35.195.68:8069/web?debug=1#" data-menu="company" data-company-id="1"><i class="fa fa-check mr8"></i>FERRETEVAR SA DE CV</a></li><li><a href="http://70.35.195.68:8069/web?debug=1#" data-menu="company" data-company-id="3"><span class="mr24"></span>Smartelecom</a></li></ul>
+    </li><li class="o_web_studio_navbar_item  hidden-xs">
+        <a href="http://70.35.195.68:8069/web?debug=1#" title="Activar Studio">
+            <img alt="Icono de Odoo Studio" height="12px" src="./report_payment_receipt - Odoo_files/studio_icon_small.png" title="Activar Studio" width="12px">
+        </a>
+    </li><li class="o_user_menu">
+        <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="http://70.35.195.68:8069/web?debug=1#">
+            <img class="img-circle oe_topbar_avatar" src="./report_payment_receipt - Odoo_files/image">
+            <span class="oe_topbar_name">Administrator (Ferretevar_)</span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            
+    <li><a data-menu="documentation" href="http://70.35.195.68:8069/web?debug=1#">Documentación</a></li>
+    <li><a data-menu="support" href="http://70.35.195.68:8069/web?debug=1#">Soporte</a></li>
+    
+        <li class="hidden-xs"><a data-menu="shortcuts" href="http://70.35.195.68:8069/web?debug=1#">Atajo</a></li>
+    <li class="divider"></li>
+    <li><a data-menu="settings" href="http://70.35.195.68:8069/web?debug=1#">Preferencias</a></li>
+    <li><a data-menu="account" href="http://70.35.195.68:8069/web?debug=1#">Mi cuenta Odoo.com</a></li>
+    <li><a data-menu="logout" href="http://70.35.195.68:8069/web?debug=1#">Cerrar sesión</a></li>
+            <li>
+                <a class="hidden" data-menu="shortcut" href="http://70.35.195.68:8069/web?debug=1#">Añadir a pantalla de inicio</a>
+            </li>
+            <li>
+                <a class="hidden" data-menu="switch" href="http://70.35.195.68:8069/web?debug=1#"> Cambiar/Añadir Cuenta</a>
+            </li>
+        
+
+        </ul>
+    </li></ul>
+    </div>
+</nav>
+                
+            
+            
+            
+            
+        
+            
+
+            
+            
+        
+    
+    <div class="o_notification_manager"></div><div class="o_loading" style="display: none;">Cargando (1)</div><div class="o_control_panel o_breadcrumb_full">
+        <ol class="breadcrumb"><li class="hidden-xs"><a>Informes</a></li><li class="hidden-xs"><a>Recibo de Pago</a></li><li class="o_back_button"><a>Vistas</a></li><li class="active">report_payment_receipt</li></ol>
+        <div class="o_cp_searchview" style="display: none;"><div class="o_searchview o_hidden">
+    <span class="o_searchview_more fa fa-search-plus" title="Búsqueda avanzada..."></span>
+<ul class="dropdown-menu o_searchview_autocomplete" role="menu"></ul><div class="o_searchview_facet" tabindex="0">
+    <span class="fa fa-filter o_searchview_facet_label"></span>
+    
+    <div class="o_facet_values"><span>
+    Activo
+</span></div>
+    <div class="fa fa-sm fa-remove o_facet_remove"></div>
+</div><input class="o_searchview_input" placeholder="Buscar…" type="text"></div></div>
+        <div class="o_cp_left">
+            <div class="o_cp_buttons"><div>
+    <div class="o_form_buttons_view o_hidden">
+        <button accesskey="a" class="btn btn-primary btn-sm o_form_button_edit" type="button" style="box-sizing: content-box;">
+            Editar
+        </button>
+        <button accesskey="c" class="btn btn-default btn-sm o_form_button_create" type="button">
+            Crear
+        </button>
+    </div>
+    <div class="o_form_buttons_edit">
+        <button accesskey="s" class="btn btn-primary btn-sm o_form_button_save" type="button">
+            Guardar
+        </button>
+        <button accesskey="j" class="btn btn-default btn-sm o_form_button_cancel" type="button">
+            Descartar
+        </button>
+    </div>
+</div></div>
+            <div class="o_cp_sidebar"><div class="btn-group o_hidden">
+    
+        <div class="btn-group o_dropdown" style="display: none;">
+            <button aria-expanded="false" class="o_dropdown_toggler_btn btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                
+                Imprimir <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu" role="menu">
+                
+                
+            </ul>
+        </div>
+    
+        <div class="btn-group o_dropdown">
+            <button aria-expanded="false" class="o_dropdown_toggler_btn btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                
+                Adjunto(s) <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu" role="menu">
+                
+                <li class="o_sidebar_add_attachment">
+                    
+    <div class="o_hidden_input_file ">
+        <form class="o_form_binary_form" enctype="multipart/form-data" method="post" action="http://70.35.195.68:8069/web/binary/upload_attachment" target="oe_fileupload134">
+            <input name="csrf_token" type="hidden" value="cf23bf617521487bb2ead37bdb2da1b787e8ffbao">
+            
+            <input name="callback" type="hidden" value="oe_fileupload134">
+            
+            <input class="o_input_file" name="ufile" type="file" multiple="multiple">
+            
+                        
+                        
+                        
+                        <input name="model" type="hidden" value="ir.ui.view">
+                        <input name="id" type="hidden" value="539">
+                        
+                        <span>Añadir...</span>
+                    
+        </form>
+        <iframe style="display: none" id="oe_fileupload134" name="oe_fileupload134" src="./report_payment_receipt - Odoo_files/saved_resource.html"></iframe>
+    </div>
+
+                </li>
+            </ul>
+        </div>
+    
+        <div class="btn-group o_dropdown">
+            <button aria-expanded="false" class="o_dropdown_toggler_btn btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                
+                Acción <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    
+                    <a data-index="0" data-section="other" href="http://70.35.195.68:8069/web?debug=1#">
+                        Borrar
+                        
+                    </a>
+                </li><li>
+                    
+                    <a data-index="1" data-section="other" href="http://70.35.195.68:8069/web?debug=1#">
+                        Duplicar
+                        
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    
+</div></div>
+        </div>
+        <div class="o_cp_right">
+            <div class="btn-group o_search_options" style="display: none;"><div class="btn-group o_dropdown">
+    <button aria-expanded="false" class="o_dropdown_toggler_btn btn btn-sm dropdown-toggle" data-toggle="dropdown">
+        <span class="fa fa-filter"></span> Filtros <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu o_filters_menu" role="menu">
+        <li data-index="0" class="selected">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Activo</a>
+    </li><li data-index="1">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Inactivo</a>
+    </li><li class="divider"></li><li data-index="0">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Formulario</a>
+    </li><li data-index="1">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Árbol</a>
+    </li><li data-index="2">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Kanban</a>
+    </li><li data-index="3">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Búsqueda</a>
+    </li><li data-index="4">
+        <a href="http://70.35.195.68:8069/web?debug=1#">QWeb</a>
+    </li><li class="divider"></li><li class="o_add_filter o_closed_menu">
+            <a href="http://70.35.195.68:8069/web?debug=1#">Añadir filtro personalizado</a>
+        </li>
+        <li class="o_add_filter_menu">
+            <button class="btn btn-primary btn-sm o_apply_filter" type="button">Aplicar</button>
+            <button class="btn btn-default btn-sm o_add_condition" type="button"><span class="fa fa-plus-circle"></span> Agregar condición</button>
+        </li>
+    </ul>
+</div><div class="btn-group hidden-xs o_dropdown">
+    <button aria-expanded="false" class="o_dropdown_toggler_btn btn btn-sm dropdown-toggle" data-toggle="dropdown">
+        <span class="fa fa-bars"></span> Agrupar Por <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu o_group_by_menu" role="menu">
+        <li data-index="0">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Objeto</a>
+    </li><li data-index="1">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Tipo</a>
+    </li><li data-index="2">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Heredar</a>
+    </li><li class="divider" style="display: list-item;"></li>
+        <li class="o_add_custom_group o_closed_menu">
+            <a href="http://70.35.195.68:8069/web?debug=1#">Añadir grupo personalizado</a>
+        </li>
+    
+    <li><select class="o_input o_add_group o_group_selector">
+        
+            <option data-name="active">Activo</option>
+        
+            <option data-name="field_parent">Campo hijo</option>
+        
+            <option data-name="key">Clave</option>
+        
+            <option data-name="create_uid">Creado por</option>
+        
+            <option data-name="l10n_mx_edi_addenda_flag">Es una addenda?</option>
+        
+            <option data-name="create_date">Fecha de creación</option>
+        
+            <option data-name="website_meta_keywords">Meta palabras clave del sitio web</option>
+        
+            <option data-name="website_meta_title">Meta título del sitio web</option>
+        
+            <option data-name="model">Modelo</option>
+        
+            <option data-name="mode">Modo de herencia de la vista</option>
+        
+            <option data-name="customize_show">Mostrar como herencia opcional</option>
+        
+            <option data-name="arch_fs">Nombre de archivo Arch</option>
+        
+            <option data-name="name">Nombre de la vista</option>
+        
+            <option data-name="type">Tipo de vista</option>
+        
+            <option data-name="inherit_id">Vista heredada</option>
+        
+            <option data-name="website_id">Website</option>
+        
+            <option data-name="write_uid">Última actualización de</option>
+        
+            <option data-name="write_date">Última fecha de modificación</option>
+        
+    </select></li>
+    <li>
+        <button class="btn btn-primary btn-sm o_add_group o_select_group" type="button">Aplicar</button>
+    </li>
+</ul>
+</div><div class="btn-group o_dropdown">
+    <button aria-expanded="false" class="o_dropdown_toggler_btn btn btn-sm dropdown-toggle" data-toggle="dropdown">
+        <span class="fa fa-star"></span> Favoritos <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu o_favorites_menu" role="menu">
+        <li class="divider user_filter"></li>
+        <li class="divider shared_filter"></li>
+        <li class="o_save_search o_closed_menu">
+            <a href="http://70.35.195.68:8069/web?debug=1#">Guardar búsqueda actual</a>
+        </li>
+        <li class="o_save_name">
+            <input type="text">
+        </li>
+        <li class="o_save_name">
+            <span><div class="o_checkbox"><input type="checkbox"><span></span></div> Usar por defecto</span>
+        </li>
+        <li class="o_save_name">
+            <span><div class="o_checkbox"><input type="checkbox"><span></span></div> Compartir con todos los usuarios </span><span class="fa fa-users"></span>
+        </li>
+        <li class="o_save_name">
+            <button class="btn btn-primary btn-sm" type="button">Guardar</button>
+        </li>
+    
+    <li class="o_add_to_dashboard_link o_closed_menu">
+        <a href="http://70.35.195.68:8069/web?debug=1#">Añadir a mi tablero</a>
+    </li>
+    <li class="o_add_to_dashboard">
+        <input class="o_add_to_dashboard_input" type="text">
+    </li>
+    <li class="o_add_to_dashboard">
+        <button class="btn btn-primary btn-sm o_add_to_dashboard_button" type="button">Añadir</button>
+    </li>
+</ul>
+</div></div>
+            <div class="o_cp_pager"><div>
+    <span class="o_pager_counter">
+        <span class="o_pager_value">1</span> / <span class="o_pager_limit">1</span>
+    </span>
+    <span class="btn-group btn-group-sm">
+        
+        
+            
+            
+        
+        <button aria-label="Previous" class="fa fa-chevron-left btn btn-icon o_pager_previous" type="button" accesskey="p" disabled=""></button>
+        <button aria-label="Next" class="fa fa-chevron-right btn btn-icon o_pager_next" type="button" accesskey="n" disabled=""></button>
+    </span>
+</div></div>
+            <div class="btn-group btn-group-sm o_cp_switch_buttons"></div>
+        </div>
+    </div><div class="o_content"><div class="o_view_manager_content"><div><div class="o_form_view o_form_editable"><div class="o_form_sheet_bg"><div class="o_form_statusbar"><div class="o_statusbar_buttons"><button class="btn btn-sm btn-default o_invisible_modifier" data-original-title="" title="">Ir al administrador de páginas</button></div></div><div class="o_form_sheet"><div class="o_group"><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_113" data-original-title="" title="">Nombre de la vista</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input o_required_modifier" name="name" type="text" placeholder="" id="o_field_input_113"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_readonly_modifier o_form_label_empty" for="o_field_input_114" data-original-title="" title="">Website</label></td><td style="width: 100%;"><a class="o_form_uri o_field_widget o_readonly_modifier o_field_empty" href="http://70.35.195.68:8069/web?debug=1#" name="website_id" id="o_field_input_114"></a></td></tr><tr><td class="o_td_label"><label class="o_form_label o_readonly_modifier" for="o_field_input_115" data-original-title="" title="">Clave</label></td><td style="width: 100%;"><span class="o_field_char o_field_widget o_readonly_modifier" name="key">account.report_payment_receipt</span></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier o_readonly_modifier" for="o_field_input_116" data-original-title="" title="">Página</label></td><td style="width: 100%;"><div class="o_field_one2many o_field_widget o_invisible_modifier o_readonly_modifier" name="page_ids"></div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_117" data-original-title="" title="">Tipo de vista</label></td><td style="width: 100%;"><select class="o_input o_field_widget" name="type" id="o_field_input_117"><option value="false"></option><option value="&quot;tree&quot;">Árbol</option><option value="&quot;form&quot;">Formulario</option><option value="&quot;graph&quot;">Gráfico</option><option value="&quot;pivot&quot;">Pivote</option><option value="&quot;calendar&quot;">Calendario</option><option value="&quot;diagram&quot;">Diagrama</option><option value="&quot;gantt&quot;">Gantt</option><option value="&quot;kanban&quot;">Kanban</option><option value="&quot;search&quot;">Búsqueda</option><option value="&quot;qweb&quot;">QWeb</option><option value="&quot;grid&quot;">Cuadrícula</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_118" data-original-title="" title="">Modelo</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="model" type="text" placeholder="" id="o_field_input_118"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_119" data-original-title="" title="">Secuencia</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_input o_required_modifier" name="priority" type="text" placeholder="" id="o_field_input_119"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_120" data-original-title="" title="">Activo</label></td><td style="width: 100%;"><div class="o_field_boolean o_field_widget o_checkbox" name="active"><input type="checkbox" id="o_field_input_120"><span></span></div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_121" data-original-title="" title="">Campo hijo</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="field_parent" type="text" placeholder="" id="o_field_input_121"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_122" data-original-title="" title="">Vista heredada</label></td><td style="width: 100%;"><div class="o_field_widget o_field_many2one" name="inherit_id">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_122">
+            <span class="o_dropdown_button" draggable="false"></span>
+        </div>
+        <button class="fa fa-external-link btn btn-default o_external_button" draggable="false" tabindex="-1" type="button" style="display: none;"></button>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_123" data-original-title="" title="">Modo de herencia de la vista</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_required_modifier" name="mode" id="o_field_input_123"><option value="false"></option><option value="&quot;primary&quot;">Vista base</option><option value="&quot;extension&quot;">Vista de extensión</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_readonly_modifier" for="o_field_input_124" data-original-title="" title="">Datos del modelo</label></td><td style="width: 100%;"><a class="o_form_uri o_field_widget o_readonly_modifier" href="http://70.35.195.68:8069/web?debug=1#id=7225&amp;model=ir.model.data" name="model_data_id" id="o_field_input_124">report_payment_receipt</a></td></tr><tr><td class="o_td_label"><label class="o_form_label o_readonly_modifier" for="o_field_input_125" data-original-title="" title="">ID externo</label></td><td style="width: 100%;"><span class="o_field_char o_field_widget o_readonly_modifier" name="xml_id">account.report_payment_receipt</span></td></tr></tbody></table></div><div class="o_notebook"><ul class="nav nav-tabs"><li class="active"><a data-toggle="tab" disable_anchor="true" href="http://70.35.195.68:8069/web?debug=1#notebook_page_503" role="tab">Estructura</a></li><li><a data-toggle="tab" disable_anchor="true" href="http://70.35.195.68:8069/web?debug=1#notebook_page_504" role="tab">Permisos de acceso</a></li><li><a data-toggle="tab" disable_anchor="true" href="http://70.35.195.68:8069/web?debug=1#notebook_page_505" role="tab">Vistas heredadas</a></li><li><a data-toggle="tab" disable_anchor="true" href="http://70.35.195.68:8069/web?debug=1#notebook_page_506" role="tab">Parámetros MX</a></li></ul><div class="tab-content nav nav-tabs"><div class="tab-pane active" id="notebook_page_503"><button type="object" name="open_translations" class="btn btn-sm oe_link oe_right" modifiers="[object Object]" options="[object Object]" data-original-title="" title=""><span>Editar traducciones</span></button><div class="oe_form_field o_ace_view_editor oe_ace_open o_field_widget" name="arch_base" data-original-title="" title="">
+        <div class="ace-view-editor ace_editor ace-tm ace_focus" style="height: 639px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 12px; width: 6.00031px; left: 218.009px; top: 156px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 648px; width: 46px;"><div class="ace_gutter-cell " style="height: 12px;">1</div><div class="ace_gutter-cell " style="height: 12px;">2<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">3<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">4<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">5<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">6<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">7</div><div class="ace_gutter-cell " style="height: 12px;">8<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">9<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">10</div><div class="ace_gutter-cell " style="height: 12px;">11</div><div class="ace_gutter-cell " style="height: 12px;">12</div><div class="ace_gutter-cell " style="height: 12px;">13<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">14</div><div class="ace_gutter-cell " style="height: 12px;">15<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">16</div><div class="ace_gutter-cell " style="height: 12px;">17</div><div class="ace_gutter-cell " style="height: 12px;">18</div><div class="ace_gutter-cell " style="height: 12px;">19<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">20<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">21</div><div class="ace_gutter-cell " style="height: 12px;">22</div><div class="ace_gutter-cell " style="height: 12px;">23<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">24</div><div class="ace_gutter-cell " style="height: 12px;">25</div><div class="ace_gutter-cell " style="height: 12px;">26</div><div class="ace_gutter-cell " style="height: 12px;">27<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">28<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">29<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">30</div><div class="ace_gutter-cell " style="height: 12px;">31</div><div class="ace_gutter-cell " style="height: 12px;">32</div><div class="ace_gutter-cell " style="height: 12px;">33</div><div class="ace_gutter-cell " style="height: 12px;">34</div><div class="ace_gutter-cell " style="height: 12px;">35</div><div class="ace_gutter-cell " style="height: 12px;">36</div><div class="ace_gutter-cell " style="height: 12px;">37<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">38<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">39</div><div class="ace_gutter-cell " style="height: 12px;">40</div><div class="ace_gutter-cell " style="height: 12px;">41</div><div class="ace_gutter-cell " style="height: 12px;">42</div><div class="ace_gutter-cell " style="height: 12px;">43</div><div class="ace_gutter-cell " style="height: 12px;">44</div><div class="ace_gutter-cell " style="height: 12px;">45</div><div class="ace_gutter-cell " style="height: 12px;">46</div><div class="ace_gutter-cell " style="height: 12px;">47</div><div class="ace_gutter-cell " style="height: 12px;">48</div><div class="ace_gutter-cell " style="height: 12px;">49</div><div class="ace_gutter-cell " style="height: 12px;">50</div><div class="ace_gutter-cell " style="height: 12px;">51</div><div class="ace_gutter-cell " style="height: 12px;">52</div></div><div class="ace_gutter-active-line" style="top: 156px; height: 12px;"></div></div><div class="ace_scroller" style="left: 46px; right: 0px; bottom: 15px;"><div class="ace_content" style="margin-top: 0px; width: 1124px; height: 648px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 484.025px; visibility: hidden;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:12px;top:156px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:12px"><span class="ace_punctuation ace_xml-decl ace_xml">&lt;?</span><span class="ace_keyword ace_xml-decl ace_xml">xml</span><span class="ace_text ace_whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_decl-attribute-name ace_xml">version</span><span class="ace_keyword ace_operator ace_decl-attribute-equals ace_xml">=</span><span class="ace_string ace_xml">"1.0"</span><span class="ace_punctuation ace_xml-decl ace_xml">?&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">t</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-name</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"account.report_payment_receipt"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">t</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-call</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"web.html_container"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">t</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-foreach</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"docs"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-as</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">t</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-call</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"web.external_layout"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"page"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">h3</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Payment Receipt: </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-field</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.name"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">h3</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"row mt64"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"col-xs-6"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-if</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.payment_date"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Payment Date: </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml"> </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-field</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.payment_date"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"row"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"col-xs-6"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-if</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.payment_method_id"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Payment Method: </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-field</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.payment_method_id.name"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"row mb64"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"col-xs-6"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-if</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.amount"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Payment Amount: </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-field</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.amount"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-options</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"{'widget': 'monetary', 'display_currency': o.currency_id}"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml"> </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"col-xs-6"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-if</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.communication"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Memo: </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">strong</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-field</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.communication"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml"> </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">table</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"table table-condensed"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">thead</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">tr</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Invoice Date</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Invoice Number</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"text-right"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Original Amount</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"text-right"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Amount Paid</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"text-right"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Balance</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">th</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">tr</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">thead</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">tbody</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">tr</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-foreach</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o.invoice_ids"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-as</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"inv"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-field</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"inv.date_invoice"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-field</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"inv.number"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"text-right"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-field</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"inv.amount_total"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"text-right"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-esc</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"o._get_invoice_payment_amount(inv)"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-options</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"{'widget': 'monetary', 'display_currency': inv.currency_id}"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"text-right"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">t-field</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"inv.residual"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">/&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">td</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">tr</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">tbody</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">table</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">t</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">t</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">t</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">t</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:12px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer"><div class="ace_cursor" style="left: 172.009px; top: 156px; width: 6.00031px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; bottom: 15px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 624px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="height: 20px; left: 46px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1124px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+    </div></div><div class="tab-pane" id="notebook_page_504"><div class="o_field_many2many o_field_widget o_field_x2many o_field_x2many_list" name="groups_id" data-original-title="" title=""><div class="o_x2m_control_panel">
+        <div class="o_cp_buttons"></div>
+        <div class="o_cp_pager"><div class="o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
+    <span class="btn-group btn-group-sm">
+        
+        
+        <button aria-label="Previous" class="fa fa-chevron-left btn btn-icon o_pager_previous" type="button"></button>
+        <button aria-label="Next" class="fa fa-chevron-right btn btn-icon o_pager_next" type="button"></button>
+    </span>
+</div></div>
+    </div><div class="table-responsive"><table class="o_list_view table table-condensed table-striped o_list_view_ungrouped"><thead><tr><th data-original-title="" title="">Nombre del grupo</th></tr></thead><tbody class="ui-sortable"><tr><td colspan="2" class="o_field_x2many_list_row_add"><a href="http://70.35.195.68:8069/web?debug=1#">Añadir un elemento</a></td></tr><tr><td colspan="2">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr></tbody><tfoot><tr><td></td></tr></tfoot></table></div></div></div><div class="tab-pane" id="notebook_page_505"><div class="o_field_one2many o_field_widget o_field_x2many o_field_x2many_list" name="inherit_children_ids" data-original-title="" title=""><div class="o_x2m_control_panel">
+        <div class="o_cp_buttons"></div>
+        <div class="o_cp_pager"><div class="o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
+    <span class="btn-group btn-group-sm">
+        
+        
+        <button aria-label="Previous" class="fa fa-chevron-left btn btn-icon o_pager_previous" type="button"></button>
+        <button aria-label="Next" class="fa fa-chevron-right btn btn-icon o_pager_next" type="button"></button>
+    </span>
+</div></div>
+    </div><div class="table-responsive"><table class="o_list_view table table-condensed table-striped o_list_view_ungrouped"><thead><tr><th class="o_column_sortable" style="text-align: right;" data-original-title="" title="">ID (identificación)</th><th class="o-sort-up o_column_sortable" style="text-align: right;" data-original-title="" title="">Secuencia</th><th class="o_column_sortable" data-original-title="" title="">Nombre de la vista</th><th data-original-title="" title="">ID externo</th></tr></thead><tbody><tr class="o_data_row"><td class="o_data_cell o_list_number o_readonly_modifier">1,124</td><td class="o_data_cell o_list_number o_required_modifier">16</td><td class="o_data_cell o_required_modifier">report_payment_document_mx</td><td class="o_data_cell o_readonly_modifier">l10n_mx_edi.report_payment_document_mx</td><td class="o_list_record_delete"><button class="fa fa-trash-o o_list_record_delete_btn" name="delete" aria-label="Eliminar fila1"></button></td></tr><tr class="o_data_row"><td class="o_data_cell o_list_number o_readonly_modifier">1,299</td><td class="o_data_cell o_list_number o_required_modifier">16</td><td class="o_data_cell o_required_modifier">l10n_mx_payment_receipt</td><td class="o_data_cell o_readonly_modifier">factura_smart.l10n_mx_payment_receipt</td><td class="o_list_record_delete"><button class="fa fa-trash-o o_list_record_delete_btn" name="delete" aria-label="Eliminar fila2"></button></td></tr><tr><td colspan="5" class="o_field_x2many_list_row_add"><a href="http://70.35.195.68:8069/web?debug=1#">Añadir un elemento</a></td></tr><tr><td colspan="5">&nbsp;</td></tr></tbody><tfoot><tr><td></td><td></td><td></td><td></td></tr></tfoot></table></div></div></div><div class="tab-pane" id="notebook_page_506"><table class="o_group o_inner_group"><tbody><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_132" data-original-title="" title="">Es una addenda?</label></td><td style="width: 100%;"><div class="o_field_boolean o_field_widget o_checkbox" name="l10n_mx_edi_addenda_flag"><input type="checkbox" id="o_field_input_132"><span></span></div></td></tr></tbody></table></div></div></div></div></div></div></div></div></div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-10" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>

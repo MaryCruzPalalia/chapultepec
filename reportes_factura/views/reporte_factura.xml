@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_factura_add" inherit_id="l10n_mx_edi.report_invoice_document_mx"> 
+     
+            <xpath expr="//h2[1]" position="before"> <!--before antes de o afeter despues de   -->
+              <!-- <img  class="img-fluid" src = "/reportes_factura/static/src/img/descarga.jpeg?access_token=a4637768-9c62-49a7-accb-859a8e0c6f1a" margin_top='20'/>  --><!-- insertar una imagen en esta parte se podria posicionar la seunda imagen de logo de la otra empresa de chapultepec -->
+                <!-- <img class="img-fluid" src="/website/static/src/img/backgrounds/sails.jpg?access_token=a4637768-9c62-49a7-accb-859a8e0c6f1a"/>  -->
+               <!--  <t t-set="o" t-value="o.with_context(lang=lang)"/>
+                    <t t-set="address">
+                        <address t-field="o.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;]}"/>
+                        <div t-if="o.partner_id.vat" class="mt16"> <span t-field="o.partner_id.vat"/></div>
+                                        
+                    </t> 
+                    <span t-field="o.partner_id.vat"/>-->
+                <t t-if="o.l10n_mx_edi_cfdi_uuid">
+                    <div class="row" id="complement">
+                        <div class="barcode col-7">
+                            <t t-set="sello" t-value="xml.get('Sello', 'No identificado')[-8:]"/>
+
+                                 <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
+                                    <div class="table-responsive-sm">
+                                    <table class="table-sm" align="left" border="0" width="80%" name="invoice_line_table">
+                                        <thead>
+                                            <tr>
+                                                <!-- TODO: remove in master -->
+                                                <t t-set="colspan" t-value="8"/>
+                                                <th class="text-left"><span>Cliente XX</span></th>
+
+                                                <th class="text-left"><span>Matrícula XX</span></th>                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody class="invoice_tbody">
+
+                                            <tr>
+                                                <td>
+                                                    <span t-field="o.partner_id"></span>
+                                                    <br/>
+                                                    <span t-field="o.partner_id.vat"></span>
+                                                    <br/>
+                                                    <span t-field="o.partner_id.l10n_mx_edi_colony"/>
+                                                    <span t-field="o.partner_id.l10n_mx_edi_locality"/>
+                                                    <br/>
+                                                    <span t-field="o.partner_id.zip"/>
+                                                    <br/>
+                                                    <span t-field="o.commercial_partner_id.name"/>
+                                                    <br/>
+                                                    <span t-field="o.partner_id.zip"></span>
+                                                </td>
+                                                <td>                                             
+                                                    <span t-field="o.x_estudiante.x_matricula"/> 
+                                                </td>
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>
+
+                                <div class="table-responsive-sm o_main_table">
+                                    <table class="table table-sm" align="left" border="0" width="80%" name="invoice_line_table">
+                                        <thead>
+                                            <tr>
+                                                <!-- TODO: remove in master -->
+                                                <t t-set="colspan" t-value="4"/>
+                                                <th class="text-left"><span>   Nombre   </span></th>
+                                                <th class="text-left"><span>   Sección   </span></th>
+                                                <th class="text-left"><span>   Grado    </span></th>
+                                                <th class="text-left"><span>   Grupo   </span></th>
+                                                <th class="text-left"><span>   CURP   </span></th>                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody class="invoice_tbody">
+
+                                            <tr>
+                                                <td>
+                                                    <span t-field="o.x_student"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="o.x_estudiante"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="o.x_estudiante.course_detail_ids.batch_id.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="o.x_estudiante.course_detail_ids.course_id.section"/>
+                                                </td>
+                                                <td>                                                   
+                                                    <span t-field="o.x_estudiante.x_matricula"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>                                      
+                                    </table>
+<!-- 
+                                    <table class="table table-sm o_main_table" name="invoice_line_table"> -->
+                                </div>
+                                    
+    
+                            
+                        </div>
+                        <div class="complement-details col-5">
+                            <div class="digital-stamp-content">
+                                <div class="digital-stamp">
+                                   <span>Emitter certificate:</span> 
+                                </div>
+                                <span>Emitter certificate:</span> <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/>
+                                <span> | SAT Certificate:</span> <span t-esc="tfd.get('NoCertificadoSAT')"/>
+                                <div class="digital-stamp">
+                                   <span>| Expedition place:</span>
+                                </div>
+                                <span> | Expedition place:</span> <span t-esc="xml.get('LugarExpedicion')"/>
+                                <div class="digital-stamp">
+                                   <span>| Fiscal Regime:</span>
+                                </div>
+                                <span> | Fiscal Regime:</span><span t-esc="xml.Emisor.get('RegimenFiscal', '')"/>
+                                <div class="digital-stamp">
+                                   <span>| Emission Date:</span>
+                                </div>
+                                <span> | Emission Date:</span> <span t-esc="xml.get('fecha', xml.get('Fecha', '')).replace('T', ' ')"/>
+                                <div class="digital-stamp">
+                                   <span>| Certification Date:</span>
+                                </div>
+                                <span> | Certification Date:</span> <span t-esc="tfd.get('FechaTimbrado', '').replace('T', ' ')"/>
+                                <div class="digital-stamp">
+                                   <span>| Fiscal Folio:</span>
+                                </div>
+                                <span> | Fiscal Folio:</span> <span t-esc="tfd.get('UUID')"/>
+                            </div>
+                            <div class="digital-stamp-content text-center">
+                                <strong>This document is a printed representation of a CFDI</strong>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </xpath> 
+
+            <xpath expr="//h2[1]" position="before">
+                
+            </xpath> 
+
+    </template>
+</odoo>
